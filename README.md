@@ -14,15 +14,18 @@ mvn package
 * cd HazelcastWorker/target/
 * java -jar hazelcastworker-1.0.0-SNAPSHOT.jar
 
+
 * cp KafkaSource/bootstrap.properties KafkaSource/target
 * cp KafkaSource/logback.xml KafkaSource/target
 * cd KafkaSource/target/
 * java -jar kafkasource-1.0.0-SNAPSHOT.jar
 
+
 * cp KafkaSink/bootstrap.properties KafkaSink/target
 * cp KafkaSink/logback.xml KafkaSink/target
 * cd KafkaSink/target/
 * java -jar kafkasink-1.0.0-SNAPSHOT.jar
+
 
 ## Start processing
 curl -X POST \
