@@ -1,4 +1,14 @@
 spring:
   application:
     name: sharedjobservice
+  cloud:
+    config:
+      failFast: false
+      uri: http://cloudconfig:8888
 
+server:
+  port: ${PORT:8010}
+
+feign:
+  hystrix:
+    enabled: false

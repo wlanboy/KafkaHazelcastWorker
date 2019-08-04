@@ -1,3 +1,14 @@
 spring:
   application:
     name: tasklogsource
+  cloud:
+    config:
+      failFast: false
+      uri: http://cloudconfig:8888
+
+server:
+  port: ${PORT:8011}
+
+feign:
+  hystrix:
+    enabled: false

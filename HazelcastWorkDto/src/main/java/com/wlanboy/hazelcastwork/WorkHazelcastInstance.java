@@ -9,9 +9,6 @@ import com.hazelcast.core.HazelcastInstanceAware;
 import com.wlanboy.hazelcastwork.config.HazelcastConfigurationStatics;
 import com.wlanboy.hazelcastwork.exceptions.CancelledWorkHazelcastInstanceException;
 
-import lombok.Getter;
-import lombok.Setter;
-
 public class WorkHazelcastInstance implements Callable<HazelcastWorkDto>, HazelcastInstanceAware, Serializable {
 
     /**
@@ -19,15 +16,10 @@ public class WorkHazelcastInstance implements Callable<HazelcastWorkDto>, Hazelc
 	 */
 	private static final long serialVersionUID = 5344451361539778804L;
 
-	@Getter
     private HazelcastInstance instance;
   
-	@Setter
-	@Getter
     private String uuid;
 	
-	@Setter
-	@Getter
     private String work;	
 	
 	private int wait = 10000;
@@ -72,5 +64,37 @@ public class WorkHazelcastInstance implements Callable<HazelcastWorkDto>, Hazelc
     public WorkState getJobStatus() {
       return getWorkDTO().getState();
     }
+
+	public HazelcastInstance getInstance() {
+		return instance;
+	}
+
+	public void setInstance(HazelcastInstance instance) {
+		this.instance = instance;
+	}
+
+	public String getUuid() {
+		return uuid;
+	}
+
+	public void setUuid(String uuid) {
+		this.uuid = uuid;
+	}
+
+	public String getWork() {
+		return work;
+	}
+
+	public void setWork(String work) {
+		this.work = work;
+	}
+
+	public int getWait() {
+		return wait;
+	}
+
+	public void setWait(int wait) {
+		this.wait = wait;
+	}
   
   }
