@@ -8,26 +8,26 @@ pipeline {
     }
     stage('Build DTO') {
       steps {
-        sh 'cd HazelcastWorkDto'
-        sh 'mvn clean package install'
+        echo 'HazelcastWorkDto'
+        sh 'mvn -f HazelcastWorkDto/pom.xml clean package install'
       }
     }
     stage('Build Worker') {
       steps {
-        sh 'cd HazelcastWorker'
-        sh 'mvn clean package'
+        echo 'HazelcastWorker'
+        sh 'mvn -f HazelcastWorker/pom.xml clean package'
       }
     }
     stage('Build Source') {
       steps {
-        sh 'cd KafkaSource'
-        sh 'mvn clean package'
+        echo 'KafkaSource'
+        sh 'mvn -f KafkaSource/pom.xml clean package'
       }
     }
     stage('Build Sink') {
       steps {
-        sh 'cd KafkaSink'
-        sh 'mvn clean package'
+        echo 'KafkaSink'
+        sh 'mvn -f KafkaSink/pom.xml clean package'
       }
     }           
   }
