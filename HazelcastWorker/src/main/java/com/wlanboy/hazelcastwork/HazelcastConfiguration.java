@@ -24,13 +24,13 @@ public class HazelcastConfiguration {
 	@Value("${server.ip:127.0.0.1}")
 	private String ip;
 
-	@Value("${server.port:5701}")
+	@Value("${server.port:5705}")
 	private int port;
 
 	@Value("${groupname:hazelcastworker}")
 	private String groupname;
 
-	@Value("${publicaddress:127.0.0.1:5701}")
+	@Value("${publicaddress:127.0.0.1:5705}")
 	private String publicaddress;
 
 	@Bean
