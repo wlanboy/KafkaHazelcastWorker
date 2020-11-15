@@ -1,3 +1,5 @@
+![Java CI with Maven](https://github.com/wlanboy/KafkaHazelcastWorker/workflows/Java%20CI%20with%20Maven/badge.svg?branch=master)
+
 # KafkaHazelcastWorker
 Spring Boot based Kafka stream, Hazelcast cache and Hazelcast Executor service
 
